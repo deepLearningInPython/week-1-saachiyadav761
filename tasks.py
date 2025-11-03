@@ -40,13 +40,13 @@ def step(x):
 # Your code here:
 # -----------------------------------------------
 
-def ReLu(array, cutoff = 0):
+def ReLU(array, cutoff = 0):
     array = np.array(array)
     array[array < cutoff] = cutoff
     return array
 
 test_array = np.array([])
-print(ReLu(test_array,cutoff= 1))
+print(ReLU(test_array,cutoff= 1))
 
 #suggestion by chatgpt for efficient code
 #def ReLu(arr, cutoff = 0):
@@ -78,6 +78,11 @@ print(ReLu(test_array,cutoff= 1))
            #  [2,3,4,5],
             # [1,2,1,1])
 #B = np.array([1,1,1,2])
+
+def ReLu(array, cutoff = 0):
+    array = np.array(array)
+    array[array < cutoff] = cutoff
+    return array
 
 def neural_net_layer(A,B):
     result = A @ B #matrix multiplication
