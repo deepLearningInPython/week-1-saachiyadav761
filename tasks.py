@@ -83,7 +83,7 @@ def ReLU(arr, cutoff=0):
 
 def neural_net_layer(A,B):
     result = A @ B #matrix multiplication
-    return ReLu(result) #apply ReLu
+    return ReLU(result) #apply ReLu
 
 #lets try
 #print(neural_net_layer(A,B))
