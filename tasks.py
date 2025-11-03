@@ -40,7 +40,7 @@ def step(x):
 # Your code here:
 # -----------------------------------------------
 
-def ReLU(arr, cutoff=0):
+def ReLu(arr, cutoff=0):
     res = []
     for num in arr:
         if num > cutoff:
@@ -83,7 +83,7 @@ def ReLU(arr, cutoff=0):
 
 def neural_net_layer(A,B):
     result = A @ B #matrix multiplication
-    return ReLU(result) #apply ReLu
+    return ReLu(result) #apply ReLu
 
 #lets try
 #print(neural_net_layer(A,B))
