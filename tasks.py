@@ -1,4 +1,4 @@
-import numpy 
+import numpy as np
 
 
 
@@ -47,7 +47,7 @@ def ReLu(arr, cutoff=0):
             res.append(num)
         else:
             res.append(cutoff)
-    return res
+    return np.array(res)
 
 
 #suggestion by chatgpt for efficient code
