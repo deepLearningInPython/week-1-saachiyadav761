@@ -1,4 +1,8 @@
-import numpy
+import numpy as np
+
+
+
+
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -18,7 +22,10 @@ def step(x):
         return 1
     else:
         return -1
-#try 
+#try with an example
+print(step(7))
+print(step(-5))
+
 
 # -----------------------------------------------
 
@@ -32,8 +39,28 @@ def step(x):
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+#my code
+def ReLu1(arr, cutoff=0):
+    res = []
+    for num in arr:
+        if num > 0:
+            res.append(num)
+        else:
+            res.append(cutoff)
+    return res
 
+
+#suggestion by chatgpt for efficient code
+def ReLu(arr, cutoff = 0):
+    return np.maximum(arr, cutoff)
+
+#try thsi code:
+arr1 = [1, -2, 4, 5, -7]
+print(ReLu1(arr1)) #using default cutoff
+print(ReLu(arr1))
+
+#using different cutoff value
+print(ReLu1(arr1, cutoff=-1)) #cutoff set to -1 here
 
 # -----------------------------------------------
 
@@ -48,7 +75,18 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+#two array - A and B for multiplication - A = 3X4 and B = 4X1
+A = np.array([1,2,3,4],
+             [2,3,4,5],
+             [1,2,1,1])
+B = np.array([1,1,1,2])
+
+def neural_net_layer(A,B):
+    result = A @ B #matrix multiplication
+    return ReLu(result) #apply ReLu
+
+#lets try
+print(neural_net_layer(A,B))
 
 
 # ------------------------------------------
