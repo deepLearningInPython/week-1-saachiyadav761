@@ -1,4 +1,4 @@
-import numpy as np
+import numpy
 
 
 
@@ -23,8 +23,8 @@ def step(x):
     else:
         return -1
 #try with an example
-print(step(7))
-print(step(-5))
+#print(step(7))
+#print(step(-5))
 
 
 # -----------------------------------------------
@@ -51,16 +51,16 @@ def ReLu1(arr, cutoff=0):
 
 
 #suggestion by chatgpt for efficient code
-def ReLu(arr, cutoff = 0):
-    return np.maximum(arr, cutoff)
+#def ReLu(arr, cutoff = 0):
+    #return np.maximum(arr, cutoff)
 
 #try thsi code:
-arr1 = [1, -2, 4, 5, -7]
-print(ReLu1(arr1)) #using default cutoff
-print(ReLu(arr1))
+#arr1 = [1, -2, 4, 5, -7]
+#print(ReLu1(arr1)) #using default cutoff
+#print(ReLu(arr1))
 
 #using different cutoff value
-print(ReLu1(arr1, cutoff=-1)) #cutoff set to -1 here
+#print(ReLu1(arr1, cutoff=-1)) #cutoff set to -1 here
 
 # -----------------------------------------------
 
@@ -86,7 +86,7 @@ def neural_net_layer(A,B):
     return ReLu(result) #apply ReLu
 
 #lets try
-print(neural_net_layer(A,B))
+#print(neural_net_layer(A,B))
 
 
 # ------------------------------------------
