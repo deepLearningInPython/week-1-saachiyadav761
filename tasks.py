@@ -39,11 +39,11 @@ def step(x):
 
 # Your code here:
 # -----------------------------------------------
-#my code
+
 def ReLu(arr, cutoff=0):
     res = []
     for num in arr:
-        if num > 0:
+        if num > cutoff:
             res.append(num)
         else:
             res.append(cutoff)
